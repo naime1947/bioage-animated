@@ -1,0 +1,266 @@
+<div class="banner">
+  <div class="container">
+    <h1 class="title" i18n>Transform your Health:</h1>
+    <h1 class="title fst-italic" i18n>Small Changes, Big Results</h1>
+
+    <p class="fw-bold" i18n>Now that you know your BioAge, what next?</p>
+    <p class="description" i18n>
+      We can improve our BioAge by taking small steps towards better health.
+      Research tells us to focus on these three aspects of our health:
+    </p>
+
+    <div class="box-wrapper">
+      <app-three-box></app-three-box>
+    </div>
+    <div class="references">
+      <app-see-reference
+        (click)="openRefModal(reFTemplate)"
+      ></app-see-reference>
+    </div>
+  </div>
+</div>
+
+<div class="container box-wrapper desktop-box">
+  <app-three-box></app-three-box>
+</div>
+
+<div class="container references desktop-box">
+  <app-see-reference (click)="openRefModal(reFTemplate)"></app-see-reference>
+</div>
+
+<ng-template #reFTemplate>
+  <div class="ref-modal">
+    <div class="modal-header">
+      <button
+        type="button"
+        class="btn-close close pull-right"
+        aria-label="Close"
+        (click)="modalRef?.hide()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 i18n>References</h2>
+
+      <p i18n>
+        <span class="color-secondary">(1)(a)</span> ACCORD Study Group; Buse JB,
+        Bigger JT, Byington RP, Cooper LS, Cushman WC, Friedewald WT, Genuth S,
+        Gerstein HC, Ginsberg HN, Goff DC Jr, Grimm RH Jr, Margolis KL,
+        Probstfield JL, Simons-Morton DG, Sullivan MD. Action to Control
+        Cardiovascular Risk in Diabetes (ACCORD) trial: design and methods. Am J
+        Cardiol. 2007 Jun 18;99(12A):21i-33i. doi:
+        10.1016/j.amjcard.2007.03.003. Epub 2007 Apr 16. PMID: 17599422.
+      </p>
+      <p i18n>
+        <span class="color-secondary">(1)(b)</span>
+        Duckworth W, Abraira C, Moritz T, et al., on behalf of the VADT
+        Investigators. Glucose control and vascular complications in veterans
+        with type 2 diabetes. N Engl J Med 2009;360:129-39.
+      </p>
+      <p i18n>
+        <span class="color-secondary">(1)(c)</span>Leslie RD. United Kingdom
+        prospective diabetes study (UKPDS): what now or so what? Diabetes Metab
+        Res Rev. 1999 Jan-Feb;15.
+      </p>
+      <p i18n>
+        <span class="color-secondary">(2)</span>(2) Galaviz KI, Narayan KMV,
+        Lobelo F, Weber MB. Lifestyle and the Prevention of Type 2 Diabetes: A
+        Status Report. Am J Lifestyle Med. 2015 Nov 24;12(1):4-20. doi:
+        10.1177/1559827615619159. PMID: 30202378; PMCID: PMC6125024.
+      </p>
+      <p i18n>
+        <span class="color-secondary"> (3)(a)</span> The Hypertension Optimal
+        Treatment Study (the HOT Study). Blood Press. 1993 Mar;2(1):62-8. doi:
+        10.3109/08037059309077529. PMID: 8193735. PMC4156910.
+      </p>
+      <p i18n>
+        <span class="color-secondary"> (3)(b)</span>) Ambrosius WT, Sink KM, Foy
+        CG, Berlowitz DR, Cheung AK, Cushman WC, Fine LJ, Goff DC Jr, Johnson
+        KC, Killeen AA, Lewis CE, Oparil S, Reboussin DM, Rocco MV, Snyder JK,
+        Williamson JD, Wright JT Jr, Whelton PK; SPRINT Study Research Group.
+        The design and rationale of a multicenter clinical trial comparing two
+        strategies for control of systolic blood pressure: the Systolic Blood
+        Pressure Intervention Trial (SPRINT). Clin Trials. 2014
+        Oct;11(5):532-46. doi: 10.1177/1740774514537404. Epub 2014 Jun 5.
+        Erratum in: Clin Trials. 2017 Apr;14(2):222. PMID: 24902920; PMCID:
+      </p>
+    </div>
+  </div>
+</ng-template>
+
+<div class="container section-two">
+  <div class="row">
+    <div class="col-lg-6">
+      <h2 class="title pe-5" i18n>Your BioAge and your health are not done!</h2>
+    </div>
+    <div class="col-lg-6">
+      <p i18n>
+        The following lifestyle recommendations have been proven tohelp people
+        like you to optimize their blood sugar, weight and blood pressure.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 hidden-custom">
+      <hr />
+    </div>
+    <div class="col-lg-4">
+      <h2 class="title title-two" i18n>
+        Our advice on what you can do to improve your health:
+      </h2>
+    </div>
+    <div class="col-lg-4 hidden-custom">
+      <hr />
+    </div>
+  </div>
+</div>
+
+<div class="container image-block-wrapper">
+  <div class="image-block">
+    <div class="desktop-content">
+      <div class="content">
+        <h2 class="title" i18n>Regular Exercise</h2>
+        <p i18n>
+          Exercise helps the body use insulin more efficiently, which can lead
+          to better blood sugar control. It can also lower blood pressure and
+          help to achieve or maintain a healthy weight.
+        </p>
+        <p i18n>
+          Aim for at least 30 minutes of moderate-intensity exercise most days
+          of the week.
+        </p>
+      </div>
+      <img src="/assets/img/action-img-1.png" alt="" />
+    </div>
+    <div class="mobile-content">
+      <img class="float-end" src="/assets/img/action-img-1.png" alt="" />
+      <h2 class="title" i18n>Regular Exercise</h2>
+      <app-read-more
+        [maxLength]="80"
+        i18n-text
+        text="Exercise helps the body use insulin more efficiently, which can lead to
+        better blood sugar control. It can also lower blood pressure and help to
+        achieve or maintain a healthy weight. Aim for at least 30 minutes of
+        moderate-intensity exercise most days of the week."
+      >
+      </app-read-more>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="image-block">
+    <div class="desktop-content">
+      <div class="content">
+        <h2 class="title" i18n>Eat Healthy</h2>
+        <p i18n>
+          Eating a balanced diet that is rich in fiber, healthy fats, and lean
+          proteins can help regulate blood sugar levels. Avoid foods high in
+          sugar and refined carbohydrates, which can cause spikes in blood sugar
+          levels.
+        </p>
+        <p i18n>
+          Dehydration can cause blood sugar levels to rise, so it's important to
+          stay hydrated by drinking plenty of water throughout the day. Drink
+          plenty of water throughout the day to help curb hunger and promote
+          good digestion.
+        </p>
+        <p i18n>
+          Certain supplements, like chromium and magnesium, may help regulate
+          blood sugar levels. Talk to your healthcare provider before starting
+          any new supplement regimen.
+        </p>
+        <p i18n>
+          Monitor your portion sizes: Use smaller plates and pay attention to
+          serving sizes to prevent overeating
+        </p>
+      </div>
+      <img src="/assets/img/action-img-2.png" alt="" />
+    </div>
+    <div class="mobile-content">
+      <img class="float-end" src="/assets/img/action-img-2.png" alt="" />
+      <h2 class="title" i18n>Eat Healthy</h2>
+      <app-read-more
+        [maxLength]="80"
+        i18n-text
+        text="Eating a balanced diet that is rich in fiber, healthy fats, and lean
+      proteins can help regulate blood sugar levels. Avoid foods high in
+      sugar and refined carbohydrates, which can cause spikes in blood sugar
+      levels. Dehydration can cause blood sugar levels to rise, so it's
+      important to stay hydrated by drinking plenty of water throughout the
+      day. Drink plenty of water throughout the day to help curb hunger and
+      promote good digestion. Certain supplements, like chromium and
+      magnesium, may help regulate blood sugar levels. Talk to your
+      healthcare provider before starting any new supplement regimen.
+      Monitor your portion sizes: Use smaller plates and pay attention to
+      serving sizes to prevent overeating"
+      >
+      </app-read-more>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="image-block">
+    <div class="desktop-content">
+      <div class="content">
+        <h2 class="title" i18n>Manage Stress</h2>
+        <p i18n>
+          High levels of stress can cause blood sugar levels, weight and blood
+          pressure to rise, so it's important to manage stress levels.
+        </p>
+        <p i18n>
+          Try to manage stress through relaxation techniques such as deep
+          breathing, meditation, or yoga.
+        </p>
+      </div>
+      <img src="/assets/img/action-img-3.png" alt="" />
+    </div>
+    <div class="mobile-content">
+      <img class="float-end" src="/assets/img/action-img-3.png" alt="" />
+      <h2 class="title" i18n>Manage Stress</h2>
+      <app-read-more
+        [maxLength]="80"
+        i18n-text
+        text="High levels of stress can cause blood sugar levels, weight and blood
+        pressure to rise, so it's important to manage stress levels.  Try to
+        manage stress through relaxation techniques such as deep breathing,
+        meditation, or yoga."
+      >
+      </app-read-more>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="image-block">
+    <div class="desktop-content">
+      <div class="content">
+        <h2 class="title" i18n>Quit Smoking</h2>
+        <p i18n>
+          Smoking can raise blood pressure and increase the risk of heart
+          disease. 
+        </p>
+        <p i18n>
+          Speak to your doctor for guidance and assistance with quitting
+          smoking.
+        </p>
+      </div>
+      <img src="/assets/img/action-img-4.png" alt="" />
+    </div>
+    <div class="mobile-content">
+      <img class="float-end" src="/assets/img/action-img-4.png" alt="" />
+      <h2 class="title" i18n>Quit Smoking</h2>
+      <app-read-more
+        [maxLength]="80"
+        i18n-text
+        text="Smoking can raise blood pressure and increase the risk of heart
+        disease.  Speak to your doctor for guidance and assistance with quitting
+        smoking."
+      >
+      </app-read-more>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="see-more-block-btn">
+    <button class="btn btn-outline-primary btn-regular-outlined" i18n>
+      See More recommendations
+    </button>
+  </div>
+</div>

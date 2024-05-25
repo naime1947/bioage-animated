@@ -1,0 +1,129 @@
+<div class="container wrapper">
+  <div class="slider">
+    <div *ngIf="ageDifference == 0" class="your-age">
+      <p class="text-center">Your BioAge</p>
+      <div class="heart">
+        <img src="/assets/img/Green-Heart.png" alt="" />
+        <span class="your-age">{{ yourBioAge }}</span>
+      </div>
+    </div>
+
+    <div class="block-wrapper">
+      <div class="each-block">
+        <div
+          *ngIf="ageDifference != 0"
+          [style.visibility]="ageDifference <= -3 ? 'visible' : 'hidden'"
+          class="your-age"
+        >
+          <p class="text-center">Your BioAge</p>
+          <div class="heart">
+            <img src="/assets/img/Green-Heart.png" alt="" />
+            <span class="your-age">{{ yourBioAge }}</span>
+          </div>
+        </div>
+        <div class="brick bg-1"></div>
+      </div>
+      <div class="each-block">
+        <div
+          *ngIf="ageDifference != 0"
+          [style.visibility]="ageDifference == -2 ? 'visible' : 'hidden'"
+          class="your-age"
+        >
+          <p class="text-center">Your BioAge</p>
+          <div class="heart">
+            <img src="/assets/img/Green-Heart.png" alt="" />
+            <span class="your-age">{{ yourBioAge }}</span>
+          </div>
+        </div>
+        <div class="brick bg-2"></div>
+      </div>
+      <div class="each-block">
+        <div
+          *ngIf="ageDifference != 0"
+          [style.visibility]="ageDifference == -1 ? 'visible' : 'hidden'"
+          class="your-age"
+        >
+          <p class="text-center">Your BioAge</p>
+          <div class="heart">
+            <img src="/assets/img/Green-Heart.png" alt="" />
+            <span class="your-age">{{ yourBioAge }}</span>
+          </div>
+        </div>
+        <div class="brick bg-3"></div>
+      </div>
+      <div class="each-block">
+        <div
+          *ngIf="ageDifference != 0"
+          [style.visibility]="ageDifference == 1 ? 'visible' : 'hidden'"
+          class="your-age"
+        >
+          <p class="text-center">Your BioAge</p>
+          <div class="heart">
+            <img src="/assets/img/Amber-Heart.png" alt="" />
+            <span class="your-age">{{ yourBioAge }}</span>
+          </div>
+        </div>
+        <div class="brick bg-4"></div>
+      </div>
+      <div class="each-block">
+        <div
+          *ngIf="ageDifference != 0"
+          [style.visibility]="ageDifference == 2 ? 'visible' : 'hidden'"
+          class="your-age"
+        >
+          <p class="text-center">Your BioAge</p>
+          <div class="heart">
+            <img src="/assets/img/Amber-Heart.png" alt="" />
+            <span class="your-age">{{ yourBioAge }}</span>
+          </div>
+        </div>
+        <div class="brick bg-5"></div>
+      </div>
+      <div class="each-block">
+        <div
+          *ngIf="ageDifference != 0"
+          [style.visibility]="ageDifference >= 3 ? 'visible' : 'hidden'"
+          class="your-age"
+        >
+          <p class="text-center">Your BioAge</p>
+          <div class="heart">
+            <img src="/assets/img/Red-Heart.png" alt="" />
+            <span class="your-age">{{ yourBioAge }}</span>
+          </div>
+        </div>
+        <div class="brick bg-6"></div>
+      </div>
+    </div>
+    <div class="your-age">
+      <div class="heart">
+        <img src="/assets/img/Blue-Heart.png" alt="" />
+        <span class="your-age">{{ yourAge }}</span>
+      </div>
+      <p class="text-center">Your age</p>
+    </div>
+  </div>
+
+  <div
+    class="content"
+    [ngClass]="{
+      'bg-1': ageDifference <= 0,
+      'bg-5': ageDifference > 0 && ageDifference < 3,
+      'bg-6': ageDifference >= 3
+    }"
+  >
+    <div class="summary">
+      <p>Your results show a difference of</p>
+      <div class="age-difference">
+        <span *ngIf="ageDifference < 0">-</span>
+        <span *ngIf="ageDifference > 0">+</span>{{ ageDifferenceAbs }} year{{
+          ageDifference != 0 && ageDifference != 1 && ageDifference != -1
+            ? "s"
+            : ""
+        }}
+      </div>
+    </div>
+    <div class="description">
+      <p>{{ description }}</p>
+    </div>
+  </div>
+</div>
