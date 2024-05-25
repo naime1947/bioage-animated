@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
 
     setInterval(()=> {
       this.yourBioAge = this.getRandomInt(49, 57)
-    }, 3000)
+    }, 5000)
   }
 
   getRandomInt(min:number, max:number) {

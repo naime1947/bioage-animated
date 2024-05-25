@@ -29,6 +29,7 @@ import { FeedbackModalComponent } from './components/feedback-modal/feedback-mod
 import { UnsecuredHeaderComponent } from './unsecured-layout/unsecured-header/unsecured-header.component';
 import { UnsecuredFooterComponent } from './unsecured-layout/unsecured-footer/unsecured-footer.component';
 import { AgeGapBannerComponent } from './components/age-gap-banner/age-gap-banner.component';
+import { HeartComponent } from './components/age-gap-banner/heart/heart.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { AgeGapBannerComponent } from './components/age-gap-banner/age-gap-banne
     UnsecuredHeaderComponent,
     UnsecuredFooterComponent,
     AgeGapBannerComponent,
+    HeartComponent,
   ],
   imports: [
     CommonModule,
