@@ -1,3 +1,11 @@
+import {
+  animate,
+  animateChild,
+  query,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { UserModel } from '@modules/auth/models/user.model';
@@ -10,8 +18,15 @@ import { sortAssessment } from '@shared/utilities/utils';
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
+  animations: [
+    trigger(`fadeIn`, [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(`800ms 0ms ease-in`, style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
-
 export class DashboardComponent implements OnInit {
   user: UserModel | null;
   latestAssessmentResult!: AssessmentResultModel;
@@ -32,19 +47,19 @@ export class DashboardComponent implements OnInit {
   }
 
   yourAge = 53;
-  yourBioAge = 57;
+  yourBioAge = 50;
   ngOnInit(): void {
     this.titleService.setTitle('Dashbaord - BioAge');
     this.myResultService.getResults();
 
-    setInterval(()=> {
-      this.yourBioAge = this.getRandomInt(49, 57)
-    }, 5000)
+    // setInterval(()=> {
+    //   this.yourBioAge = this.getRandomInt(49, 57)
+    // }, 5000)
   }
 
-  getRandomInt(min:number, max:number) {
+  getRandomInt(min: number, max: number) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+  }
 }
