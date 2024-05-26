@@ -7,11 +7,11 @@ import { heartBeat } from '@shared/animations/animation';
   templateUrl: './heart.component.html',
   styleUrls: ['heart.component.scss'],
   animations: [
-    trigger(`flyInY`, [
+    trigger(`flyInDown`, [
       transition('void => *', [
-        style({ opacity: 0, transform: `translateY(-100%)` }),
+        style({ opacity: 0, transform: `translateY(-50%)` }),
         animate(
-          `600ms 400ms ease-in`,
+          `600ms 200ms ease-in`,
           style({ opacity: 1, transform: `translateY(0%)` })
         ),
       ]),

@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="slider">
-    <div [@flyInY] [@heartBeat] *ngIf="ageDifference == 0" class="your-age">
+    <div [@flyInDown] [@heartBeat] *ngIf="ageDifference == 0" class="your-age">
       <p class="text-center">Your BioAge</p>
       <div class="heart">
         <img src="/assets/img/Green-Heart.png" alt="" />
@@ -16,7 +16,7 @@
           [yourBioAge]="yourBioAge"
         ></app-heart>
 
-        <div class="brick bg-1"></div>
+        <div class="brick bg-1" [@slideInLeft]></div>
       </div>
       <div class="each-block">
         <app-heart
@@ -25,7 +25,7 @@
           [yourBioAge]="yourBioAge"
         ></app-heart>
 
-        <div class="brick bg-2" ></div>
+        <div class="brick bg-2" [@slideInLeft]></div>
       </div>
       <div class="each-block">
         <app-heart
@@ -33,7 +33,7 @@
           [style.opacity]="ageDifference == -1 ? 1 : 0"
           [yourBioAge]="yourBioAge"
         ></app-heart>
-        <div class="brick bg-3" ></div>
+        <div class="brick bg-3" [@slideInLeft]></div>
       </div>
       <div class="each-block">
         <app-heart
@@ -42,7 +42,7 @@
           [yourBioAge]="yourBioAge"
         ></app-heart>
 
-        <div class="brick bg-4" ></div>
+        <div class="brick bg-4" [@slideInLeft]></div>
       </div>
       <div class="each-block">
         <app-heart
@@ -51,7 +51,7 @@
           [yourBioAge]="yourBioAge"
         ></app-heart>
 
-        <div class="brick bg-5" ></div>
+        <div class="brick bg-5" [@slideInLeft]></div>
       </div>
       <div class="each-block">
         <app-heart
@@ -59,12 +59,12 @@
           [style.opacity]="ageDifference >= 3 ? 1 : 0"
           [yourBioAge]="yourBioAge"
         ></app-heart>
-        <div class="brick bg-6" ></div>
+        <div class="brick bg-6" [@slideInLeft]></div>
       </div>
     </div>
 
     <div
-      [@flyInX]
+      [@flyInUp]
       [@heartBeat]
       class="your-age"
     >

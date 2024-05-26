@@ -7,21 +7,21 @@ import { flipInX, heartBeat, slideInLeft } from '@shared/animations/animation';
   templateUrl: './age-gap-banner.component.html',
   styleUrls: ['./age-gap-banner.component.scss'],
   animations:[
-    trigger(`flyInY`, [
+    trigger(`flyInDown`, [
       transition('void => *', [
-        style({ opacity: 0, transform: `translateY(-100%)` }),
+        style({ opacity: 0, transform: `translateY(-50%)` }),
         animate(
           `600ms 200ms ease-in`,
           style({ opacity: 1, transform: `translateY(0%)` })
         ),
       ]),
     ]),
-    trigger(`flyInX`, [
+    trigger(`flyInUp`, [
       transition('void => *', [
-        style({ opacity: 0, transform: `translateX(-100%)` }),
+        style({ opacity: 0, transform: `translateY(50%)` }),
         animate(
-          `800ms 100ms ease-in`,
-          style({ opacity: 1, transform: `translateX(0%)` })
+          `600ms 200ms ease-in`,
+          style({ opacity: 1, transform: `translateY(0%)` })
         ),
       ]),
     ]),
