@@ -34,6 +34,18 @@ const data = [
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
     biologicalAge: 68,
+    healtRisk: {
+      yourAge: {
+        cardiovascular: 4.6,
+        chronicKideny: 5.2,
+        highBloodPressure: 4,
+      },
+      yourBioAge: {
+        cardiovascular: 9,
+        chronicKideny: 25,
+        highBloodPressure: 12,
+      },
+    },
   },
   {
     id: '2',
@@ -42,6 +54,18 @@ const data = [
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
     biologicalAge: 68,
+    healtRisk: {
+      yourAge: {
+        cardiovascular: 4.6,
+        chronicKideny: 5.2,
+        highBloodPressure: 4,
+      },
+      yourBioAge: {
+        cardiovascular: 9,
+        chronicKideny: 25,
+        highBloodPressure: 12,
+      },
+    },
   },
   {
     id: '3',
@@ -50,6 +74,18 @@ const data = [
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
     biologicalAge: 68,
+    healtRisk: {
+      yourAge: {
+        cardiovascular: 4.6,
+        chronicKideny: 5.2,
+        highBloodPressure: 4,
+      },
+      yourBioAge: {
+        cardiovascular: 9,
+        chronicKideny: 25,
+        highBloodPressure: 12,
+      },
+    },
   },
   {
     id: '4',
@@ -58,6 +94,18 @@ const data = [
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
     biologicalAge: 68,
+    healtRisk: {
+      yourAge: {
+        cardiovascular: 4.6,
+        chronicKideny: 5.2,
+        highBloodPressure: 4,
+      },
+      yourBioAge: {
+        cardiovascular: 9,
+        chronicKideny: 25,
+        highBloodPressure: 12,
+      },
+    },
   },
   {
     id: '5',
@@ -66,5 +114,17 @@ const data = [
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
     biologicalAge: 68,
+    healtRisk: {
+      yourAge: {
+        cardiovascular: 4.6,
+        chronicKideny: 5.2,
+        highBloodPressure: 4,
+      },
+      yourBioAge: {
+        cardiovascular: 9,
+        chronicKideny: 25,
+        highBloodPressure: 12,
+      },
+    },
   },
 ];

@@ -27,12 +27,13 @@ import { sortAssessment } from '@shared/utilities/utils';
       ]),
     ]),
     slideInLeft(1000, 0),
-    slideInRight(1000, 100)
+    slideInRight(1000, 100),
   ],
 })
 export class DashboardComponent implements OnInit {
   user: UserModel | null;
   latestAssessmentResult!: AssessmentResultModel;
+  result: any;
 
   constructor(
     private authService: AuthService,
@@ -49,8 +50,6 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  yourBioAge = 61;
-  yourAge = 53;
   ngOnInit(): void {
     this.titleService.setTitle('Dashbaord - BioAge');
     this.myResultService.getResults();
