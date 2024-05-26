@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  yourBioAge = 51;
+  yourBioAge = 61;
   yourAge = 53;
   ngOnInit(): void {
     this.titleService.setTitle('Dashbaord - BioAge');

@@ -49,6 +49,6 @@ export class AgeGapBannerComponent implements OnInit, OnChanges {
     this.ageDifference = this.yourBioAge - this.yourAge;
     this.ageDifferenceAbs = Math.abs(this.ageDifference);
     this.ageDifferenceAbs =
-      this.ageDifferenceAbs > 3 ? 3 : this.ageDifferenceAbs;
+      this.ageDifferenceAbs > 5 ? 5 : this.ageDifferenceAbs;
   }
 }
