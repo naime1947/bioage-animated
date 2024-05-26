@@ -64,7 +64,6 @@
     </div>
 
     <div
-      [@simpleFadeAnimation]="yourAge"
       [@flyInX]
       [@heartBeat]
       class="your-age"
@@ -81,9 +80,9 @@
     [@flipInX]
     class="content"
     [ngClass]="{
-      'bg-1': ageDifference <= 0,
-      'bg-5': ageDifference > 0 && ageDifference < 3,
-      'bg-6': ageDifference >= 3
+      'bg-1': ageDifference < 0,
+      'bg-6': ageDifference > 0
+
     }"
   >
     <div class="summary">

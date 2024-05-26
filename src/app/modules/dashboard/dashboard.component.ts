@@ -12,6 +12,7 @@ import { UserModel } from '@modules/auth/models/user.model';
 import { AuthService } from '@modules/auth/services/auth.service';
 import { AssessmentResultModel } from '@modules/my-results/models/assessment-result.model';
 import { MyResultService } from '@modules/my-results/services/my-result.service';
+import { slideInLeft, slideInRight } from '@shared/animations/animation';
 import { sortAssessment } from '@shared/utilities/utils';
 
 @Component({
@@ -25,6 +26,8 @@ import { sortAssessment } from '@shared/utilities/utils';
         animate(`800ms 0ms ease-in`, style({ opacity: 1 })),
       ]),
     ]),
+    slideInLeft(1000, 0),
+    slideInRight(1000, 100)
   ],
 })
 export class DashboardComponent implements OnInit {
@@ -46,8 +49,8 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  yourBioAge = 51;
   yourAge = 53;
-  yourBioAge = 50;
   ngOnInit(): void {
     this.titleService.setTitle('Dashbaord - BioAge');
     this.myResultService.getResults();

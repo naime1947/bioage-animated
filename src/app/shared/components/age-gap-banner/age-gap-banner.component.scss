@@ -6,6 +6,10 @@
   --color-bg-red: #ef3e2d;
   font-family: "Montserrat", sans-serif !important;
 
+  .bg-0{
+    background-color: var(--color-primary);
+    opacity: 1;
+  }
   .bg-1 {
     background: var(--color-bg-green);
     opacity: 1;

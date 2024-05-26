@@ -44,6 +44,20 @@ export const slideInLeft = (animationTime: number = 1000, delay: number = 10) =>
   ]);
 };
 
+export const slideInRight = (animationTime: number = 1000, delay: number = 10) => {
+  return trigger(`slideInRight`, [
+    transition('void => *', [
+      animate(
+        `${animationTime}ms ${delay}ms ease-in`,
+        keyframes([
+          style({ transform: 'translate3d(100%, 0, 0)', visibility: 'visible', offset: 0 }),
+          style({ transform: 'translateZ(0)', offset: 1 })
+        ])
+      ),
+    ]),
+  ]);
+};
+
 export const flipInX = (animationTime: number = 1000, delay: number = 10) => {
   return trigger(`flipInX`, [
     transition('void => *', [
