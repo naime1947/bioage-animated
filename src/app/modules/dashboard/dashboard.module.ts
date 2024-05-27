@@ -6,6 +6,7 @@ import { SharedModule } from '@shared/shared.module';
 import { AgeGapBannerComponent } from './age-gap-banner/age-gap-banner.component';
 import { HeartComponent } from './age-gap-banner/heart/heart.component';
 import { HealthRiskComponent } from './health-risk/health-risk.component';
+import { WhatThisMeanComponent } from './what-this-mean/what-this-mean.component';
 
 
 
@@ -14,7 +15,8 @@ import { HealthRiskComponent } from './health-risk/health-risk.component';
     DashboardComponent,
     AgeGapBannerComponent,
     HeartComponent,
-    HealthRiskComponent
+    HealthRiskComponent,
+    WhatThisMeanComponent
   ],
   imports: [
     CommonModule,
