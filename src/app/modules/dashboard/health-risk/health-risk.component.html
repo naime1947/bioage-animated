@@ -16,7 +16,7 @@
           <td class="td-header">Your BioAge</td>
         </tr>
         <tr>
-          <td class="td-header td-title">Statistical risk of having...</td>
+          <td class="td-cel-desc td-header td-title">Statistical risk of having...</td>
           <td class="td-girl">
             <svg
               version="1.2"
@@ -64,7 +64,7 @@
           </td>
         </tr>
         <tr>
-          <td class="td-no-padding-left">
+          <td class="td-cel-desc td-no-padding-left">
             A Cardiovascular Event in next 10 yrs
           </td>
           <td class="data-cell" style="border-radius: 22px 22px 0 0">
@@ -78,7 +78,7 @@
           </td>
         </tr>
         <tr>
-          <td class="td-no-padding-left">Chronic Kidney Disease</td>
+          <td class="td-cel-desc td-no-padding-left">Chronic Kidney Disease</td>
           <td class="data-cell">
             {{ latestAssessmentResult?.healtRisk?.yourAge?.chronicKideny }}%
           </td>
@@ -90,7 +90,7 @@
           </td>
         </tr>
         <tr>
-          <td class="td-no-padding-left">High Blood Pressure</td>
+          <td class="td-cel-desc td-no-padding-left">High Blood Pressure</td>
           <td class="data-cell" style="border-radius: 0 0 22px 22px">
             {{
               latestAssessmentResult?.healtRisk?.yourAge?.highBloodPressure
@@ -171,27 +171,27 @@
           </td>
         </tr>
         <tr>
-          <td colspan="3">A Cardiovascular Event in next 10 yrs</td>
+          <td class="td-title-cell" style="border-radius: 14px 14px 0 0; padding-top: 2rem;" colspan="3">Risk of having a cardiac event</td>
         </tr>
         <tr>
-          <td class="data-cell" style="border-radius: 22px 22px 0 0">
+          <td class="data-cell">
             {{ latestAssessmentResult?.healtRisk?.yourAge?.cardiovascular }}%
           </td>
-          <td></td>
-          <td class="data-cell" style="border-radius: 22px 22px 0 0">
+          <td class="td-title-cell"></td>
+          <td class="data-cell">
             {{
               latestAssessmentResult?.healtRisk?.yourBioAge?.cardiovascular
             }}%
           </td>
         </tr>
         <tr>
-          <td colspan="3">Chronic Kidney Disease</td>
+          <td class="td-title-cell" colspan="3">Risk of having Type 2 Diabetes</td>
         </tr>
         <tr>
           <td class="data-cell">
             {{ latestAssessmentResult?.healtRisk?.yourAge?.chronicKideny }}%
           </td>
-          <td></td>
+          <td class="td-title-cell"></td>
           <td class="data-cell">
             {{
               latestAssessmentResult?.healtRisk?.yourBioAge?.chronicKideny
@@ -199,16 +199,16 @@
           </td>
         </tr>
         <tr>
-          <td colspan="3">High Blood Pressure</td>
+          <td class="td-title-cell" colspan="3">Risk of having elevated blood pressure</td>
         </tr>
         <tr>
-          <td class="data-cell" style="border-radius: 0 0 22px 22px">
+          <td class="data-cell" style="border-radius: 0 0 0 14px">
             {{
               latestAssessmentResult?.healtRisk?.yourAge?.highBloodPressure
             }}%
           </td>
-          <td></td>
-          <td class="data-cell" style="border-radius: 0 0 22px 22px">
+          <td class="td-title-cell"></td>
+          <td class="data-cell" style="border-radius: 0 0 14px 0">
             {{
               latestAssessmentResult?.healtRisk?.yourBioAge
                 ?.highBloodPressure
