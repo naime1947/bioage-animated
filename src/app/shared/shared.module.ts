@@ -28,8 +28,6 @@ import { BioageProgressChartComponent } from './charts/components/bioage-progres
 import { FeedbackModalComponent } from './components/feedback-modal/feedback-modal.component';
 import { UnsecuredHeaderComponent } from './unsecured-layout/unsecured-header/unsecured-header.component';
 import { UnsecuredFooterComponent } from './unsecured-layout/unsecured-footer/unsecured-footer.component';
-import { AgeGapBannerComponent } from './components/age-gap-banner/age-gap-banner.component';
-import { HeartComponent } from './components/age-gap-banner/heart/heart.component';
 
 @NgModule({
   declarations: [
@@ -54,8 +52,6 @@ import { HeartComponent } from './components/age-gap-banner/heart/heart.componen
     FeedbackModalComponent,
     UnsecuredHeaderComponent,
     UnsecuredFooterComponent,
-    AgeGapBannerComponent,
-    HeartComponent,
   ],
   imports: [
     CommonModule,
@@ -98,9 +94,7 @@ import { HeartComponent } from './components/age-gap-banner/heart/heart.componen
     BioageProgressChartComponent,
     FeedbackModalComponent,
     UnsecuredHeaderComponent,
-    UnsecuredFooterComponent,
-    AgeGapBannerComponent
-  ],
+    UnsecuredFooterComponent  ],
   providers: [
     AuthGuard
   ]

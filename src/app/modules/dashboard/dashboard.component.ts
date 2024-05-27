@@ -6,7 +6,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { UserModel } from '@modules/auth/models/user.model';
 import { AuthService } from '@modules/auth/services/auth.service';

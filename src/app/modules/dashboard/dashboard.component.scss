@@ -2,25 +2,45 @@
   --color-section-bg: #f8f8f8;
 }
 
+::ng-deep {
+  .section-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 1.2rem 0;
+  }
+
+  .section-description {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .section-title {
+      font-size: 28px;
+      line-height: 36px;
+      margin: 1rem 0;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .section-title {
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+
+
 .container {
   background-color: #fff;
   padding: 1rem 3rem;
   margin-top: 0;
   margin-bottom: 0;
   border-radius: 9px;
-}
-
-.section-title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  margin: 1.2rem 0;
-}
-
-.section-description {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
 }
 
 .section-page-header {
@@ -30,92 +50,6 @@
     font-size: 60px;
     line-height: 72px;
     margin: 2rem 0 3rem;
-  }
-}
-
-.section-health-risk {
-  background-color: var(--color-section-bg);
-  border-radius: 9px;
-  padding: 1rem 3rem 5rem 3rem;
-
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    table {
-      td {
-        padding: 2rem 1.5rem;
-        text-align: center;
-
-        font-size: 23px;
-        font-weight: 600;
-        line-height: 23px;
-      }
-      td:first-child {
-        width: 250px;
-        text-align: end;
-        padding-left: 0;
-      }
-      .td-header {
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 30px;
-        padding: 5rem 0;
-      }
-
-      .td-title{
-        padding: 0;
-      }
-
-
-
-      .td-girl {
-        padding-top: 1rem;
-        padding: 0 2rem;
-        position: relative;
-        svg {
-          width: auto;
-          height: auto;
-          /* bottom: 0; */
-          max-width: 138px;
-          position: absolute;
-          bottom: 0;
-          left: 30px;
-        }
-        span {
-          position: absolute;
-          top: 15px;
-          right: 68px;
-          display: inline-block;
-          height: 64px;
-          width: 66px;
-          border-radius: 50%;
-          border: 2.5px solid var(--color-primary);
-          background-color: #fff;
-          font-size: 32px;
-          font-weight: 700;
-          line-height: 22px;
-          text-align: center;
-          padding-top: 20px;
-        }
-      }
-
-      .td-vs {
-        width: 72px;
-        text-align: center;
-        font-size: 28px;
-        font-weight: 700;
-      }
-      .data-cell {
-        width: 200px;
-        padding: 2rem 0;
-        background: #d0ecf6;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 40px;
-        text-align: center;
-        letter-spacing: -1%;
-      }
-    }
   }
 }
 
@@ -132,11 +66,6 @@
       line-height: 52px;
       margin: 2rem 0;
     }
-    .section-title {
-      font-size: 28px;
-      line-height: 36px;
-      margin: 1rem 0;
-    }
   }
 }
 
@@ -152,11 +81,6 @@
       font-size: 28px;
       line-height: 32px;
       margin: 1.5rem 0;
-    }
-    .section-title {
-      font-size: 18px;
-      line-height: 26px;
-      margin: 0.5rem 0;
     }
   }
 }
