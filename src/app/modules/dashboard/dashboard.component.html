@@ -57,14 +57,16 @@
                 width="274"
                 height="286"
               >
-                <style>
+                <!-- <style>
+
                   .s02 {
-                    fill: #ef3e2d;
+                    fill:#ef3e2d;
                   }
-                </style>
+                </style> -->
                 <path
                   id="Shape 2"
                   class="s02"
+                  [attr.fill]="latestAssessmentResult.biologicalAge - latestAssessmentResult.choronologicalAge > 0 ? '#ef3e2d': '#92c83e'"
                   d="m136.5 108.5c-29.8 0-54-24.2-54-54 0-29.8 24.2-54 54-54 29.8 0 54 24.2 54 54 0 29.8-24.2 54-54 54zm-135.5 177.5l46-132c8.5-23.8 20.8-33.2 43-34 18-0.2 79 0 79 0 36 0 52.7 11.7 60.7 36.8 8 25.2 44.3 129.2 44.3 129.2h-45l-33-97c-2.2-6-9.2-3.5-7 3 2.2 7.3 33 94 33 94h-169l32-94c3.2-7.3-4.7-8-6-3-1.5 4.2-34 97-34 97z"
                 />
               </svg>

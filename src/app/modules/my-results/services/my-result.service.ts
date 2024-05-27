@@ -33,7 +33,7 @@ const data = [
     dateOfLatestImaging: new Date('2015-03-25'),
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
-    biologicalAge: 68,
+    biologicalAge: 38,
     healtRisk: {
       yourAge: {
         cardiovascular: 4.6,
