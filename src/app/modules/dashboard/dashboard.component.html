@@ -14,7 +14,9 @@
       The below risk scores show the likelihood of different diseases for a
       person of your age and your BioAge based on statistical information.
     </p>
-    <div class="wrapper">
+
+    <!-- desktop version min-width 992px required -->
+    <div class="wrapper desktop-block">
       <table>
         <tbody>
           <tr>
@@ -24,9 +26,108 @@
             <td class="td-header">Your BioAge</td>
           </tr>
           <tr>
-            <td class="td-header td-title">
-              Statistical risk of having...
+            <td class="td-header td-title">Statistical risk of having...</td>
+            <td class="td-girl">
+              <svg
+                version="1.2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 274 286"
+                width="274"
+                height="286"
+              >
+                <style>
+                  .s01 {
+                    fill: #052460;
+                  }
+                </style>
+                <path
+                  id="Shape 1"
+                  class="s01"
+                  d="m136.5 108.5c-29.8 0-54-24.2-54-54 0-29.8 24.2-54 54-54 29.8 0 54 24.2 54 54 0 29.8-24.2 54-54 54zm-135.5 177.5l46-132c8.5-23.8 20.8-33.2 43-34 18-0.2 79 0 79 0 36 0 52.7 11.7 60.7 36.8 8 25.2 44.3 129.2 44.3 129.2h-45l-33-97c-2.2-6-9.2-3.5-7 3 2.2 7.3 33 94 33 94h-169l32-94c3.2-7.3-4.7-8-6-3-1.5 4.2-34 97-34 97z"
+                />
+              </svg>
+              <span>{{ latestAssessmentResult?.choronologicalAge }}</span>
             </td>
+            <td class="td-vs">VS</td>
+            <td class="td-girl">
+              <svg
+                version="1.2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 274 286"
+                width="274"
+                height="286"
+              >
+                <path
+                  id="Shape 2"
+                  class="s02"
+                  attr.fill="{{
+                    latestAssessmentResult.biologicalAge -
+                      latestAssessmentResult.choronologicalAge >
+                    0
+                      ? '#ef3e2d'
+                      : '#92c83e'
+                  }}"
+                  d="m136.5 108.5c-29.8 0-54-24.2-54-54 0-29.8 24.2-54 54-54 29.8 0 54 24.2 54 54 0 29.8-24.2 54-54 54zm-135.5 177.5l46-132c8.5-23.8 20.8-33.2 43-34 18-0.2 79 0 79 0 36 0 52.7 11.7 60.7 36.8 8 25.2 44.3 129.2 44.3 129.2h-45l-33-97c-2.2-6-9.2-3.5-7 3 2.2 7.3 33 94 33 94h-169l32-94c3.2-7.3-4.7-8-6-3-1.5 4.2-34 97-34 97z"
+                />
+              </svg>
+              <span>{{ latestAssessmentResult?.biologicalAge }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="td-no-padding-left">
+              A Cardiovascular Event in next 10 yrs
+            </td>
+            <td class="data-cell" style="border-radius: 22px 22px 0 0">
+              {{ latestAssessmentResult?.healtRisk?.yourAge?.cardiovascular }}%
+            </td>
+            <td></td>
+            <td class="data-cell" style="border-radius: 22px 22px 0 0">
+              {{
+                latestAssessmentResult?.healtRisk?.yourBioAge?.cardiovascular
+              }}%
+            </td>
+          </tr>
+          <tr>
+            <td class="td-no-padding-left">Chronic Kidney Disease</td>
+            <td class="data-cell">
+              {{ latestAssessmentResult?.healtRisk?.yourAge?.chronicKideny }}%
+            </td>
+            <td></td>
+            <td class="data-cell">
+              {{
+                latestAssessmentResult?.healtRisk?.yourBioAge?.chronicKideny
+              }}%
+            </td>
+          </tr>
+          <tr>
+            <td class="td-no-padding-left">High Blood Pressure</td>
+            <td class="data-cell" style="border-radius: 0 0 22px 22px">
+              {{
+                latestAssessmentResult?.healtRisk?.yourAge?.highBloodPressure
+              }}%
+            </td>
+            <td></td>
+            <td class="data-cell" style="border-radius: 0 0 22px 22px">
+              {{
+                latestAssessmentResult?.healtRisk?.yourBioAge
+                  ?.highBloodPressure
+              }}%
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- mobile version. max width 991px required -->
+    <div class="wrapper mobile-block">
+      <table>
+        <tbody>
+          <tr>
+            <td class="td-header">Your Age</td>
+            <td></td>
+            <td class="td-header">Your BioAge</td>
+          </tr>
+          <tr>
             <td class="td-girl">
               <svg
                 version="1.2"
@@ -66,7 +167,13 @@
                 <path
                   id="Shape 2"
                   class="s02"
-                  [attr.fill]="latestAssessmentResult.biologicalAge - latestAssessmentResult.choronologicalAge > 0 ? '#ef3e2d': '#92c83e'"
+                  [attr.fill]="
+                    latestAssessmentResult.biologicalAge -
+                      latestAssessmentResult.choronologicalAge >
+                    0
+                      ? '#ef3e2d'
+                      : '#92c83e'
+                  "
                   d="m136.5 108.5c-29.8 0-54-24.2-54-54 0-29.8 24.2-54 54-54 29.8 0 54 24.2 54 54 0 29.8-24.2 54-54 54zm-135.5 177.5l46-132c8.5-23.8 20.8-33.2 43-34 18-0.2 79 0 79 0 36 0 52.7 11.7 60.7 36.8 8 25.2 44.3 129.2 44.3 129.2h-45l-33-97c-2.2-6-9.2-3.5-7 3 2.2 7.3 33 94 33 94h-169l32-94c3.2-7.3-4.7-8-6-3-1.5 4.2-34 97-34 97z"
                 />
               </svg>
@@ -74,9 +181,9 @@
             </td>
           </tr>
           <tr>
-            <td class="td-no-padding-left">
-              A Cardiovascular Event in next 10 yrs
-            </td>
+            <td colspan="3">A Cardiovascular Event in next 10 yrs</td>
+          </tr>
+          <tr>
             <td class="data-cell" style="border-radius: 22px 22px 0 0">
               {{ latestAssessmentResult?.healtRisk?.yourAge?.cardiovascular }}%
             </td>
@@ -88,7 +195,9 @@
             </td>
           </tr>
           <tr>
-            <td class="td-no-padding-left">Chronic Kidney Disease</td>
+            <td colspan="3">Chronic Kidney Disease</td>
+          </tr>
+          <tr>
             <td class="data-cell">
               {{ latestAssessmentResult?.healtRisk?.yourAge?.chronicKideny }}%
             </td>
@@ -100,7 +209,9 @@
             </td>
           </tr>
           <tr>
-            <td class="td-no-padding-left">High Blood Pressure</td>
+            <td colspan="3">High Blood Pressure</td>
+          </tr>
+          <tr>
             <td class="data-cell" style="border-radius: 0 0 22px 22px">
               {{
                 latestAssessmentResult?.healtRisk?.yourAge?.highBloodPressure

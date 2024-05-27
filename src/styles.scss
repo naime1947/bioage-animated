@@ -42,3 +42,16 @@
 body{
   background-color: var(--color-body);
 }
+
+
+@media (max-width: 992px) {
+  .desktop-block {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-block {
+    display: none !important;
+  }
+}
