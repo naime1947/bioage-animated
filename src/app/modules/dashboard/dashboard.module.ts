@@ -7,6 +7,9 @@ import { AgeGapBannerComponent } from './age-gap-banner/age-gap-banner.component
 import { HeartComponent } from './age-gap-banner/heart/heart.component';
 import { HealthRiskComponent } from './health-risk/health-risk.component';
 import { WhatThisMeanComponent } from './what-this-mean/what-this-mean.component';
+import { CompareToOthersComponent } from './compare-to-others/compare-to-others.component';
+import { GirlSvgComponent } from './compare-to-others/girl-svg/girl-svg.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 
 
@@ -16,12 +19,15 @@ import { WhatThisMeanComponent } from './what-this-mean/what-this-mean.component
     AgeGapBannerComponent,
     HeartComponent,
     HealthRiskComponent,
-    WhatThisMeanComponent
+    WhatThisMeanComponent,
+    CompareToOthersComponent,
+    GirlSvgComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    SharedModule
+    SharedModule,
+    NgxSliderModule
   ]
 })
 export class DashboardModule { }
