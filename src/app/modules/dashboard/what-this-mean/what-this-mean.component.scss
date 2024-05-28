@@ -1,21 +1,21 @@
 .section {
   background-color: var(--color-section-bg);
   border-radius: 9px;
-  padding: 1rem 3rem 5rem 3rem;
+  padding: 1rem 3rem 2.5rem 3rem;
 
-  .wrapper{
+  .wrapper {
     margin: 4rem 0 0 0;
     display: flex;
     justify-content: center;
     gap: 5rem;
   }
 
-  .each-info-circle{
+  .each-info-circle {
     max-width: 225px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    .circle{
+    .circle {
       height: 225px;
       width: 225px;
       border-radius: 50%;
@@ -27,20 +27,87 @@
       font-weight: 800;
       line-height: 40px;
 
-
-      background: #EF3E2D;
+      background: #ef3e2d;
       opacity: 0.8;
-      &.selected{
+      &.selected {
         opacity: 1;
       }
     }
 
-    .info{
+    .info {
       margin: 2rem 0 0 0;
       font-size: 23px;
       font-weight: 600;
       text-align: center;
       line-height: 27px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    .wrapper {
+
+      margin: 2rem 0 0 0;
+      gap: 1.5rem;
+    }
+
+    .each-info-circle {
+      max-width: 160px;
+      .circle {
+        height: 160px;
+        width: 160px;
+        font-size: 24px;
+        line-height: 26px;
+        padding: 2.5rem 1.5rem;
+        &.selected {
+        }
+      }
+
+      .info {
+        margin: .75rem 0 0 0;
+        font-size: 16px;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section {
+    padding: .5rem 1rem 1.5rem 1rem;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .each-info-circle {
+      width: 262px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      max-width: 100%;
+      padding: 0;
+      .circle {
+        width: 98px;
+        height: 98px;
+        font-size: 19px;
+        line-height: 18px;
+        padding: 2.5rem 1rem;
+        padding-bottom: 0;
+        padding-top: 1.5rem;
+        &.selected {
+        }
+      }
+
+      .info {
+        text-align: left;
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 .section-health-risk {
   background-color: var(--color-section-bg);
   border-radius: 9px;
-  padding: 1rem 3rem 5rem 3rem;
+  padding: 1rem 3rem 3rem 3rem;
 
   .wrapper {
     display: flex;
@@ -88,7 +88,7 @@
 
 @media screen and (max-width: 991px) {
   .section-health-risk {
-    padding: .5rem 1rem;
+    padding: .5rem 1rem 1.5rem 1rem;
 
     .wrapper {
       display: flex;
