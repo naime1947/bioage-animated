@@ -7,9 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class GirlSvgComponent {
   @Input() color = '#ef3e2d';
-  @Input() width="83";
+  @Input() width = 83;
 
   getHeight(){
-    return parseInt(this.width) * 2.07;
+    return this.width * 2.07;
   }
 }

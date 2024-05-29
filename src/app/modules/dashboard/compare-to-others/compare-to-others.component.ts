@@ -1,16 +1,16 @@
 import { LabelType, Options } from '@angular-slider/ngx-slider';
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { AssessmentResultModel } from '@modules/my-results/models/assessment-result.model';
 
 @Component({
   selector: 'app-compare-to-others',
   templateUrl: './compare-to-others.component.html',
-  styleUrls: ['./compare-to-others.component.scss']
+  styleUrls: ['./compare-to-others.component.scss'],
 })
-export class CompareToOthersComponent {
+export class CompareToOthersComponent implements OnInit, AfterViewInit {
   @Input() latestAssessmentResult!: AssessmentResultModel;
 
-  value: number = 9;
+
   options: Options = {
     floor: 1,
     ceil: 10,
@@ -20,11 +20,37 @@ export class CompareToOthersComponent {
     translate: (value: number, label: LabelType): string => {
       switch (label) {
         case LabelType.Low:
-          return "<b>You</b>";
+          return '<b>You</b>';
         default:
-          return "";
+          return '';
       }
-    }
+    },
   };
 
+  girlWidth = 83;
+  selectedGirlWidth = this.girlWidth * 1.26;
+  selectedGrilNum = 8;
+
+  ngOnInit(): void {
+    this.setGirlWidth(window.innerWidth);
+  }
+
+  ngAfterViewInit(): void {
+    //this.setGirlWidth(window.innerWidth);
+  }
+
+  setGirlWidth(screenWidth: number) {
+    console.log(innerWidth)
+    if (screenWidth > 991) {
+      this.girlWidth = 83;
+      this.selectedGirlWidth = this.girlWidth * 1.26;
+    }else if(screenWidth < 992 && screenWidth > 574){
+      this.girlWidth = 48;
+      this.selectedGirlWidth = this.girlWidth * 1.26;
+    }
+    else{
+      this.girlWidth = 23;
+      this.selectedGirlWidth = this.girlWidth * 1.26;
+    }
+  }
 }
