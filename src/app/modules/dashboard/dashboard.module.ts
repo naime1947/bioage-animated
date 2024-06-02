@@ -11,6 +11,7 @@ import { CompareToOthersComponent } from './compare-to-others/compare-to-others.
 import { GirlSvgComponent } from './compare-to-others/girl-svg/girl-svg.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { JournalComponent } from './journal/journal.component';
+import { WellnessExamComponent } from './wellness-exam/wellness-exam.component';
 
 
 
@@ -23,7 +24,8 @@ import { JournalComponent } from './journal/journal.component';
     WhatThisMeanComponent,
     CompareToOthersComponent,
     GirlSvgComponent,
-    JournalComponent
+    JournalComponent,
+    WellnessExamComponent
   ],
   imports: [
     CommonModule,
