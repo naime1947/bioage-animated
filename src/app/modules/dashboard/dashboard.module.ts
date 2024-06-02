@@ -10,6 +10,7 @@ import { WhatThisMeanComponent } from './what-this-mean/what-this-mean.component
 import { CompareToOthersComponent } from './compare-to-others/compare-to-others.component';
 import { GirlSvgComponent } from './compare-to-others/girl-svg/girl-svg.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { JournalComponent } from './journal/journal.component';
 
 
 
@@ -21,7 +22,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     HealthRiskComponent,
     WhatThisMeanComponent,
     CompareToOthersComponent,
-    GirlSvgComponent
+    GirlSvgComponent,
+    JournalComponent
   ],
   imports: [
     CommonModule,

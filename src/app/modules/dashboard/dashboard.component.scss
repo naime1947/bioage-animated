@@ -16,6 +16,14 @@
     line-height: 24px;
   }
 
+  .full-block{
+    margin-top: 2rem;
+    background: #D0ECF6;
+    .container{
+      background-color: transparent !important;
+    }
+  }
+
   @media screen and (max-width: 991px) {
     .section-title {
       font-size: 28px;
@@ -86,5 +94,9 @@
       line-height: 32px;
       margin: 1.5rem 0;
     }
+  }
+
+  .full-block{
+    margin-top: 1rem;
   }
 }
