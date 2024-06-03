@@ -12,6 +12,7 @@ import { GirlSvgComponent } from './compare-to-others/girl-svg/girl-svg.componen
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { JournalComponent } from './journal/journal.component';
 import { WellnessExamComponent } from './wellness-exam/wellness-exam.component';
+import { ImproveBioageComponent } from './improve-bioage/improve-bioage.component';
 
 
 
@@ -25,7 +26,8 @@ import { WellnessExamComponent } from './wellness-exam/wellness-exam.component';
     CompareToOthersComponent,
     GirlSvgComponent,
     JournalComponent,
-    WellnessExamComponent
+    WellnessExamComponent,
+    ImproveBioageComponent
   ],
   imports: [
     CommonModule,
