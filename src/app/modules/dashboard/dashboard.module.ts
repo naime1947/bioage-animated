@@ -13,6 +13,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { JournalComponent } from './journal/journal.component';
 import { WellnessExamComponent } from './wellness-exam/wellness-exam.component';
 import { ImproveBioageComponent } from './improve-bioage/improve-bioage.component';
+import { NextBioageComponent } from './next-bioage/next-bioage.component';
 
 
 
@@ -27,7 +28,8 @@ import { ImproveBioageComponent } from './improve-bioage/improve-bioage.componen
     GirlSvgComponent,
     JournalComponent,
     WellnessExamComponent,
-    ImproveBioageComponent
+    ImproveBioageComponent,
+    NextBioageComponent
   ],
   imports: [
     CommonModule,
