@@ -16,14 +16,7 @@
     line-height: 24px;
   }
 
-  .full-block{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background: #D0ECF6;
-    .container{
-      background-color: transparent !important;
-    }
-  }
+
 
   @media screen and (max-width: 991px) {
     .section-title {
@@ -56,13 +49,21 @@
   margin-bottom: 0;
 }
 
+.full-block{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: #D0ECF6;
+  .container{
+    background-color: transparent !important;
+  }
+}
+
 .section-page-header {
-  margin-top: 1.5rem;
   .page-title {
     font-weight: 700;
     font-size: 60px;
     line-height: 72px;
-    margin: 2rem 0 3rem;
+    margin: 1.5rem 0 2rem;
   }
 }
 
