@@ -17,3 +17,13 @@ footer{
     }
   }
 }
+
+@media screen and (max-width: 575px) {
+  footer{
+    padding: 2rem 0 3rem 0;
+  }
+
+  p{
+    font-size: 8px;
+  }
+}
